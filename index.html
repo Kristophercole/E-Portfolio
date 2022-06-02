@@ -27,28 +27,28 @@
           <li class="nav__link">
             <a
               href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              class="nav__link--anchor link__hover-effect link__hover-effect--dark"
               >About</a
             >
           </li>
           <li class="nav__link">
             <a
               href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              class="nav__link--anchor link__hover-effect link__hover-effect--dark"
               >Projects</a
             >
           </li>
           <li class="nav__link">
             <a
               href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              class="nav__link--anchor link__hover-effect link__hover-effect--dark"
               >Contact</a
             >
           </li>
-          <li class="nav__link">
+          <li class="nav__link click">
             <a
               href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              class="nav__link--anchor link__hover-effect link__hover-effect--dark"
               ><i class="fa-solid fa-circle-half-stroke"></i
             ></a>
           </li>
@@ -57,27 +57,202 @@
       <header class="header">
         <div class="header__content">
           <h1 class="title">Hey</h1>
-          <h1 class="title main-color">I'm Kris</h1>
+          <h1 class="title secondary-color">I'm Kris</h1>
           <p class="header__para">
-            I'm a <b class="main-color">Frontend Software Engineer</b> with a
-            strong passion for building responsive web applications with great
+            I'm a
+            <span class="secondary-color">Frontend Software Engineer</span> with
+            a strong passion for building responsive web applications with great
             user experiences.
             <br />
-            Here's a bit more <b class="main-color">about me</b>
+            Here's a bit more <span class="secondary-color">about me</span>.
           </p>
           <div class="social__list">
-            <a href="" class="social__link click"
+            <a
+              href="https://www.linkedin.com/in/kristopher-cole-a02812240/"
+              class="social__link click secondary-color--icons"
+              target="_blank"
               ><i class="fa-brands fa-linkedin-in"></i
             ></a>
-            <a href="" class="social__link click"
+            <a
+              href="https://github.com/Kristophercole"
+              class="social__link click secondary-color--icons"
+              target="_blank"
               ><i class="fa-brands fa-github"></i
             ></a>
-            <a href="" class="social__link click"
+            <a href="" class="social__link click secondary-color--icons"
               ><i class="fa-solid fa-file-pdf"></i
             ></a>
           </div>
         </div>
       </header>
+      <button class="mail__button click secondary-color--icons">
+        <i class="fa-solid fa-envelope fa-2x"></i>
+      </button>
+      <a href="#projects" class="scroll">
+        <div class="scroll__icon click"></div>
+      </a>
+      <div class="modal">
+        <div class="modal__half modal__about">
+          <h3 class="modal__title modal__title--about">
+            Here's a bit about me.
+          </h3>
+          <h4 class="modal__sub-title modal__sub-title--about">
+            Frontend Software Engineer
+          </h4>
+          <p class="modal__para">
+            I'm an 18 year old Australian
+            <span class="secondary-color">Frontend software engineer</span>
+            with a strong passion for developing websites with great
+            <span class="secondary-color">user experiences.</span>
+            <br />
+            I'm currently solving complex & difficult engineer problems and am
+            <span class="secondary-color">developing </span> fantastic projects
+            with <span class="secondary-color">brilliant</span> user interfaces.
+          </p>
+          <div class="modal__languages"></div>
+        </div>
+        <div class="modal__half modal__contact">
+          <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
+          <h4 class="modal__sub-title modal__sub-title--contact">
+            I'm currently open to new opportunities
+          </h4>
+        </div>
+      </div>
     </section>
+    <section id="projects">
+      <div class="container">
+        <div class="row">
+          <h1 class="projects__title">
+            Here are some of my <span class="secondary-color">projects</span>
+          </h1>
+          <ul class="projects__list">
+            <li class="project">
+              <div class="projects__wrapper">
+                <img
+                  src="./assets/blinker mockup.png"
+                  class="projects__img"
+                  alt="Project img"
+                />
+                <div class="projects__wrapper--bg"></div>
+                <div class="projects__desc">
+                  <h3 class="projects__desc--title">React E-Commerce</h3>
+                  <h4 class="projects__desc--sub-title">
+                    Html, CSS, JavaScript, React
+                  </h4>
+                  <p class="projects__desc--para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                    fugiat, molestiae sit totam, asperiores et soluta quod ab
+                    vero commodi vitae ipsam eius repudiandae quos. Molestiae id
+                    consectetur quidem autem!
+                  </p>
+                  <div class="projects__desc--links">
+                    <a href="#" class="projects__desc--link">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="#" class="projects__desc--link">
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="project">
+              <div class="projects__wrapper">
+                <img
+                  src="./assets/blinker mockup.png"
+                  class="projects__img"
+                  alt="Project img"
+                />
+                <div class="projects__wrapper--bg"></div>
+                <div class="projects__desc">
+                  <h3 class="projects__desc--title">React E-Commerce</h3>
+                  <h4 class="projects__desc--sub-title">
+                    Html, CSS, JavaScript, React
+                  </h4>
+                  <p class="projects__desc--para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                    fugiat, molestiae sit totam, asperiores et soluta quod ab
+                    vero commodi vitae ipsam eius repudiandae quos. Molestiae id
+                    consectetur quidem autem!
+                  </p>
+                  <div class="projects__desc--links">
+                    <a href="#" class="projects__desc--link">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="#" class="projects__desc--link">
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="project">
+              <div class="projects__wrapper">
+                <img
+                  src="./assets/blinker mockup.png"
+                  class="projects__img"
+                  alt="Project img"
+                />
+                <div class="projects__wrapper--bg"></div>
+                <div class="projects__desc">
+                  <h3 class="projects__desc--title">React E-Commerce</h3>
+                  <h4 class="projects__desc--sub-title">
+                    Html, CSS, JavaScript, React
+                  </h4>
+                  <p class="projects__desc--para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                    fugiat, molestiae sit totam, asperiores et soluta quod ab
+                    vero commodi vitae ipsam eius repudiandae quos. Molestiae id
+                    consectetur quidem autem!
+                  </p>
+                  <div class="projects__desc--links">
+                    <a href="#" class="projects__desc--link">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="#" class="projects__desc--link">
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="row footer__row">
+          <figure>
+            <img class="footer__logo" src="/assets/logo.png" alt="Logo" />
+          </figure>
+          <div class="footer__social--list">
+            <a
+              href="#"
+              class="footer__social--link link__hover-effect link__hover-effect--light"
+              >GitHub</a
+            >
+            <a
+              href="#"
+              class="footer__social--link link__hover-effect link__hover-effect--light"
+              >Linkedin</a
+            >
+            <a
+              href="#"
+              class="footer__social--link link__hover-effect link__hover-effect--light"
+              >Email</a
+            >
+            <a
+              href="#"
+              class="footer__social--link link__hover-effect link__hover-effect--light"
+              >Resume</a
+            >
+          </div>
+          <div class="footer__copyright">
+            Copyright &copy; 2022 Kristopher Cole
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
