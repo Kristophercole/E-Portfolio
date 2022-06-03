@@ -106,16 +106,69 @@
             <span class="secondary-color">user experiences.</span>
             <br />
             I'm currently solving complex & difficult engineer problems and am
-            <span class="secondary-color">developing </span> fantastic projects
-            with <span class="secondary-color">brilliant</span> user interfaces.
+            developing
+            <span class="secondary-color">fantastic </span> projects with
+            <span class="secondary-color">brilliant</span> user interfaces.
           </p>
-          <div class="modal__languages"></div>
+          <div class="modal__languages">
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://upload.wikimedia.org/wikipedia/commons/8/82/Devicon-html5-plain.svg"
+                alt="HTML 5"
+              />
+              <span class="language__name">HTML</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://upload.wikimedia.org/wikipedia/commons/7/70/Devicon-css3-plain.svg"
+                alt="CSS 3"
+              />
+              <span class="language__name">CSS</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
+                alt="JavaScript"
+              />
+              <span class="language__name">JavaScript</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="/assets/react-logo.png"
+                alt="React"
+              />
+              <span class="language__name">React</span>
+            </figure>
+          </div>
         </div>
         <div class="modal__half modal__contact">
           <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
-          <h4 class="modal__sub-title modal__sub-title--contact">
+          <h3 class="modal__sub-title modal__sub-title--contact">
             I'm currently open to new opportunities
-          </h4>
+          </h3>
+          <form id="contact__form" action="">
+            <div class="form__item">
+              <label class="form__item--label">Name</label>
+              <input class="input" name="user_name" type="text" required />
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Email</label>
+              <input class="input" name="user_email" type="email" required />
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Message</label>
+              <textarea
+                class="input"
+                name="message"
+                type="text"
+                required
+              ></textarea>
+            </div>
+          </form>
         </div>
       </div>
     </section>
