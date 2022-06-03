@@ -18,6 +18,7 @@
 
 section {
   background-color: var(--main-color--light);
+  transition: all 300ms ease;
 }
 
 .secondary-color {
@@ -174,7 +175,8 @@ CONTRAST
 .dark-theme .nav__link--anchor,
 .dark-theme .fa-circle-half-stroke,
 .dark-theme .header__para,
-.dark-theme .projects__title {
+.dark-theme .projects__title,
+.dark-theme .modal__about {
   color: #fff;
 }
 
@@ -191,7 +193,8 @@ CONTRAST
   color: #000;
 }
 
-.dark-theme section {
+.dark-theme section,
+.dark-theme .modal__about {
   background-color: var(--main-color--dark);
 }
 
@@ -200,7 +203,8 @@ CONTRAST
   border-color: #fff;
 }
 
-.dark-theme .scroll__icon:after {
+.dark-theme .scroll__icon:after,
+.dark-theme .link__hover-effect--dark:after {
   background-color: #fff;
 }
 
@@ -426,17 +430,18 @@ MODAL
 }
 
 .modal__title {
-  font-size: 26px;
+  font-size: 32px;
 }
 
 .modal__sub-title {
   margin: 12px 0 24px 0;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .modal__para {
   margin-bottom: 12px;
   line-height: 1.75;
+  font-size: 18px;
 }
 
 .form__item {
