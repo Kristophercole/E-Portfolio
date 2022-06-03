@@ -14,13 +14,13 @@
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <section id="landing-page">
+    <section id="landing-page" onmousemove="moveBackground(event)">
       <nav>
         <figure>
           <img id="personal-logo" src="/assets/logo.png" alt="Logo" />
         </figure>
         <ul class="nav__link--list">
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--dark"
@@ -29,7 +29,7 @@
           </li>
           <li class="nav__link">
             <a
-              href="#"
+              href="#projects"
               class="nav__link--anchor link__hover-effect link__hover-effect--dark"
               >Projects</a
             >
@@ -44,8 +44,9 @@
           <li class="nav__link click" onclick="toggleContrast()">
             <a
               href="#"
+              onclick="rotate()"
               class="nav__link--anchor link__hover-effect link__hover-effect--dark"
-              ><i class="fa-solid fa-circle-half-stroke"></i
+              ><i class="fa-solid fa-circle-half-stroke rotate"></i
             ></a>
           </li>
         </ul>
@@ -84,12 +85,14 @@
           </div>
         </div>
       </header>
-      <button
-        class="mail__button click secondary-color--icons"
-        onclick="toggleModal()"
-      >
-        <i class="fa-solid fa-envelope fa-2x"></i>
-      </button>
+      <a href="#">
+        <button
+          class="mail__button click secondary-color--icons"
+          onclick="toggleModal()"
+        >
+          <i class="fa-solid fa-envelope fa-2x"></i>
+        </button>
+      </a>
       <a href="#projects" class="scroll">
         <div class="scroll__icon click"></div>
       </a>
@@ -183,6 +186,15 @@
           </div>
         </div>
       </div>
+      <img src="/assets/semi circle.svg" class="shape shape--0" />
+      <img src="/assets/circle.svg" class="shape shape--1" />
+      <img src="/assets/squiggly.svg" class="shape shape--2" />
+      <img src="/assets/circle.svg" class="shape shape--3" />
+      <img src="/assets/triangle.svg" class="shape shape--4" />
+      <img src="/assets/circle.svg" class="shape shape--5" />
+      <img src="/assets/squiggly.svg" class="shape shape--6" />
+      <img src="/assets/circle.svg" class="shape shape--7" />
+      <img src="/assets/semi circle.svg" class="shape shape--8" />
     </section>
     <section id="projects">
       <div class="container">
@@ -293,22 +305,26 @@
           </figure>
           <div class="footer__social--list">
             <a
-              href="#"
+              href="https://github.com/Kristophercole"
+              target="_blank"
               class="footer__social--link link__hover-effect link__hover-effect--light"
               >GitHub</a
             >
             <a
-              href="#"
+              href="https://www.linkedin.com/in/kristopher-cole-a02812240/"
+              target="_blank"
               class="footer__social--link link__hover-effect link__hover-effect--light"
               >Linkedin</a
             >
             <a
               href="#"
               class="footer__social--link link__hover-effect link__hover-effect--light"
-              >Email</a
+              onclick="toggleModal()"
+              >Contact</a
             >
             <a
               href="#"
+              target="_blank"
               class="footer__social--link link__hover-effect link__hover-effect--light"
               >Resume</a
             >
