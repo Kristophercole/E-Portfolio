@@ -10,12 +10,8 @@
       name="keywords"
       content="Kristopher Cole, Kristopher, Cole, E-Portfolio, Portfolio"
     />
-    <link rel="stylesheet" href="/styles.css" />
-    <script
-      src="https://kit.fontawesome.com/ec4ffeb0fb.js"
-      crossorigin="anonymous"
-    ></script>
     <title>Kristopher Cole</title>
+    <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
     <section id="landing-page">
@@ -38,14 +34,14 @@
               >Projects</a
             >
           </li>
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--dark"
               >Contact</a
             >
           </li>
-          <li class="nav__link click">
+          <li class="nav__link click" onclick="toggleContrast()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--dark"
@@ -57,14 +53,17 @@
       <header class="header">
         <div class="header__content">
           <h1 class="title">Hey</h1>
-          <h1 class="title secondary-color">I'm Kris</h1>
+          <h1 class="sub-title secondary-color">I'm Kris</h1>
           <p class="header__para">
             I'm a
             <span class="secondary-color">Frontend Software Engineer</span> with
             a strong passion for building responsive web applications with great
             user experiences.
             <br />
-            Here's a bit more <span class="secondary-color">about me</span>.
+            Here's a bit more
+            <span class="secondary-color click" onclick="toggleModal()"
+              >about me</span
+            >.
           </p>
           <div class="social__list">
             <a
@@ -85,7 +84,10 @@
           </div>
         </div>
       </header>
-      <button class="mail__button click secondary-color--icons">
+      <button
+        class="mail__button click secondary-color--icons"
+        onclick="toggleModal()"
+      >
         <i class="fa-solid fa-envelope fa-2x"></i>
       </button>
       <a href="#projects" class="scroll">
@@ -146,11 +148,12 @@
           </div>
         </div>
         <div class="modal__half modal__contact">
+          <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
           <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
           <h3 class="modal__sub-title modal__sub-title--contact">
             I'm currently open to new opportunities
           </h3>
-          <form id="contact__form" action="">
+          <form id="contact__form" onsubmit="contact(event)">
             <div class="form__item">
               <label class="form__item--label">Name</label>
               <input class="input" name="user_name" type="text" required />
@@ -168,7 +171,16 @@
                 required
               ></textarea>
             </div>
+            <button id="contact__submit" class="form__submit">
+              Send it my way
+            </button>
           </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fas fa-spinner"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--success">
+            Thanks for the message! Looking forward to speaking with u soon.
+          </div>
         </div>
       </div>
     </section>
@@ -307,5 +319,19 @@
         </div>
       </div>
     </footer>
+    <script
+      src="https://kit.fontawesome.com/ec4ffeb0fb.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("6jnBHp2HpYfP_jJdn");
+      })();
+    </script>
   </body>
 </html>

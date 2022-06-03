@@ -47,8 +47,33 @@ textarea {
   background-color: #242424;
   color: #fff;
   outline: none;
-  border: 1px solid #c0c4cc;
-  border-radius: ;
+  border-bottom: 3px solid #c0c4cc;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  height: 40px;
+  transition: all 300ms ease;
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+input:hover,
+textarea:hover {
+  border-color: #dcdfe6;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--secondary-color--light);
+}
+
+textarea {
+  resize: vertical;
+  height: 100px;
+  margin-top: 8px;
 }
 
 p {
@@ -57,6 +82,13 @@ p {
 }
 
 .title {
+  font-size: 120px;
+  margin-bottom: 12px;
+  text-align: left;
+  line-height: 1;
+}
+
+.sub-title {
   font-size: 120px;
   margin-bottom: 12px;
   text-align: left;
@@ -77,6 +109,7 @@ p {
 
 .click {
   transition: all 250ms ease;
+  cursor: pointer;
 }
 
 .click:hover {
@@ -112,6 +145,63 @@ p {
 .link__hover-effect:hover:after {
   left: 0;
   width: 100%;
+}
+
+nav,
+.scroll,
+header {
+  opacity: 1;
+  visibility: visible;
+  transition: all 600ms 700ms;
+}
+
+.modal--open nav,
+.modal--open .scroll,
+.modal--open header {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 400ms;
+}
+
+/* 
+
+CONTRAST
+
+*/
+
+.dark-theme .title,
+.dark-theme .section__title,
+.dark-theme .nav__link--anchor,
+.dark-theme .fa-circle-half-stroke,
+.dark-theme .header__para,
+.dark-theme .projects__title {
+  color: #fff;
+}
+
+.dark-theme #personal-logo {
+  filter: invert(1);
+}
+
+.dark-theme .secondary-color {
+  color: var(--secondary-color--dark);
+}
+
+.dark-theme .secondary-color--icons {
+  background-color: var(--secondary-color--dark);
+  color: #000;
+}
+
+.dark-theme section {
+  background-color: var(--main-color--dark);
+}
+
+.dark-theme .scroll__icon,
+.dark-theme .scroll__icon:after {
+  border-color: #fff;
+}
+
+.dark-theme .scroll__icon:after {
+  background-color: #fff;
 }
 
 /* 
@@ -260,22 +350,38 @@ MODAL
   width: 90%;
   max-width: 1100px;
   height: 700px;
-  box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
   border-radius: 20px;
   overflow: hidden;
   display: flex;
+  visibility: hidden;
+  z-index: -1;
+  transition: visibility 1s, z-index 1s, box-shadow 0.5s ease;
+}
+
+.modal--open .modal {
+  z-index: 60;
+  box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
+  visibility: visible;
 }
 
 .modal__half {
   width: 50%;
   padding: 40px 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  transition: all 300ms ease;
+}
+
+.modal--open .modal__about,
+.modal--open .modal__contact {
+  transform: translateX(0%);
 }
 
 .modal__about {
   background-color: var(--main-color--light);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  transform: translateX(-110%);
 }
 
 .modal__languages {
@@ -316,6 +422,7 @@ MODAL
 .modal__contact {
   background-color: #242424;
   color: #fff;
+  transform: translateX(110%);
 }
 
 .modal__title {
@@ -324,11 +431,90 @@ MODAL
 
 .modal__sub-title {
   margin: 12px 0 24px 0;
+  font-size: 14px;
 }
 
 .modal__para {
   margin-bottom: 12px;
   line-height: 1.75;
+}
+
+.form__item {
+  margin-bottom: 20px;
+}
+
+.form__submit {
+  background-color: var(--secondary-color--light);
+  border: 2px solid var(--secondary-color--light);
+  color: #fff;
+  font-weight: bold;
+  width: 100%;
+  max-width: 240px;
+  padding: 12px 24px;
+  font-size: 20px;
+  transition: all 300ms ease;
+}
+
+.form__submit:hover {
+  border-color: #fff;
+  background-color: transparent;
+}
+
+.form__submit:active {
+  border-color: var(--secondary-color--light);
+  color: var(--secondary-color--light);
+}
+
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+
+.modal__overlay--loading {
+  background-color: #242424;
+  font-size: 80px;
+}
+
+.modal__overlay--success {
+  background-color: #4bb543;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  padding: 28px;
+}
+
+.modal__overlay--visible {
+  z-index: 1;
+  display: flex;
+}
+
+.fa-spinner {
+  animation: spinner 750ms infinite linear;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.modal__exit {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: #fff;
+  font-size: 36px;
+  z-index: 100;
 }
 
 /* 
